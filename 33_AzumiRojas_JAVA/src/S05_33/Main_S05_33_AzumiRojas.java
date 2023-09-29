@@ -5,6 +5,7 @@
  */
 package S05_33;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class Main_S05_33_AzumiRojas {
@@ -29,4 +30,22 @@ public class Main_S05_33_AzumiRojas {
 
         estudiante.mostrarDatosJOptionPane();
         libro.mostrarDatosJOptionPane();
+        //cuenta bancaria y auto
+        Scanner scanner = new Scanner(System.in);
+        CuentaBancaria_33 cuenta = new CuentaBancaria_33();
+        System.out.print("Ingrese el titular de la cuenta: ");
+        cuenta.titular = scanner.nextLine();
+        System.out.print("Ingrese el saldo de la cuenta: ");
+        cuenta.saldo = scanner.nextDouble();
+
+        Auto_33 auto = new Auto_33();
+        System.out.print("Ingrese la marca del auto: ");
+        auto.marca = scanner.next();
+        System.out.print("Ingrese el modelo del auto: ");
+        auto.modelo = scanner.next();
+
+       
+        System.out.println("\nInformación del auto:");
+        auto.imprimirInformacion();
     }}
+
